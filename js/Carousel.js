@@ -4,10 +4,9 @@ var React = require('react');
 var Util = require('./util');
 var Layout = require('./layout');
 var Depot = require('./depot');
+var createClass = require('create-react-class');
 
-var Carousel = React.createClass({
-    displayName: 'Carousel',
-
+var Carousel = createClass({
     getInitialState: function getInitialState() {
         return {
             images: this.props.images,
@@ -29,7 +28,7 @@ var Carousel = React.createClass({
             return React.createElement(
                 'figure',
                 { key: i, style: Util.figureStyle(d) },
-                React.createElement('img', { src: d.image, alt: i, height: '100%', width: '100%' })
+                React.createElement('img', { src: d.image, alt: i, height: "100%", width: "100%" })
             );
         });
         return React.createElement(
@@ -38,7 +37,7 @@ var Carousel = React.createClass({
             React.createElement(
                 'div',
                 { className: 'carousel',
-                    style: { transform: 'translateZ(' + translateZ + 'px)' } },
+                    style: { transform: "translateZ(" + translateZ + "px)" } },
                 figures
             ),
             React.createElement('div', { className: 'prev', onClick: Util.partial(this.onRotate, +angle) }),

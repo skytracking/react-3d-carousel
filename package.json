@@ -4,7 +4,8 @@
   "description": "A 3D carousel written in react",
   "main": "js/Carousel.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "babel ./src --out-dir ./js"
   },
   "keywords": [
     "carousel",
@@ -12,10 +13,11 @@
     "react-component"
   ],
   "dependencies": {
+    "create-react-class": "^15.6.3",
     "ease-functions": "0.0.1"
   },
   "peerDependencies": {
-    "react": ">=0.13.x < 1.0.0"
+    "react": "16.8.2"
   },
   "prepublish": "babel ./src --out-dir ./js",
   "author": "Slobodan Blazeski <slobodan.blazeski@gmail.com>",

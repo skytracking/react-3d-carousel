@@ -26,7 +26,7 @@ _exports.range = function range(from, to) {
 };
 
 _exports.uniq = function uniq(a) {
-    var prims = { 'boolean': {}, 'number': {}, 'string': {} },
+    var prims = { "boolean": {}, "number": {}, "string": {} },
         objs = [];
     return a.filter(function (item) {
         var type = typeof item;

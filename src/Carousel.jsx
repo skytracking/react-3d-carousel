@@ -4,8 +4,9 @@ var React = require('react');
 var Util = require('./util');
 var Layout = require('./layout');
 var Depot = require('./depot');
+var createClass = require('create-react-class')
 
-var Carousel = React.createClass({
+var Carousel = createClass({
     getInitialState: function () {
         return {
             images: this.props.images,
